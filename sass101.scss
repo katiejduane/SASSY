@@ -1,0 +1,51 @@
+@import '_variables.scss';
+@import '_mixins.scss';
+
+$font-stack: Helvetica, sans-serif;
+$phone-breakpoint: 490px;
+$tablet-breakpoint: 750px;
+
+.text {
+    font-size: 20px;
+    color: black;
+    line-height: 20px;
+    background-color: cornflowerblue;
+}
+
+body {
+    font-family: $font-stack;
+}
+
+// regular CSS syntax--->
+// ul li ul li {
+//     color: aquamarine;
+// }
+
+// SASS syntax for the above code--->
+ul{
+    li{
+        list-style: none;
+        ul{
+            li{
+                color: palevioletred;
+            }
+        }
+    }
+}
+
+#header{
+    float: left;
+    ul{
+        background-color: rosybrown;
+        float: left;
+        @include border-radius(10px);
+        li {
+            background-color: gray;
+            @include border-radius(5px);
+        }
+    }
+}
+
+#content{
+    @extend .text;
+}
