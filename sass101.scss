@@ -49,3 +49,22 @@ ul{
 #content{
     @extend .text;
 }
+
+li:hover{
+    transition: all 2s;
+    position: relative;
+    left: 1000px - 100px;
+}
+
+@for $i from 1 through 8{
+    $width: percentage(1/$i);
+    .col-#{$i} {
+        width: $width;
+    }
+}
+
+$num: 4;
+
+@while $num > 0{
+    $num: $num - 1;
+}
